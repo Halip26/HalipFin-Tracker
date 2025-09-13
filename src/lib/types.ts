@@ -16,9 +16,13 @@ export type Transaction = {
 
 export type CategoryInfo = {
   name: string;
+  iconName: string; // Changed from icon: Icon
   icon: Icon;
   color: string; // HSL color string
 };
+
+export type CategoryInfoSerializable = Omit<CategoryInfo, 'icon'>;
+
 
 export type Budget = {
   category: string; // category name

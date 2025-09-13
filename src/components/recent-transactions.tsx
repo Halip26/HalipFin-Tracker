@@ -2,6 +2,7 @@ import { categories } from '@/lib/data';
 import { cn } from '@/lib/utils';
 import type { Transaction } from '@/lib/types';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import * as Icons from 'lucide-react';
 
 export function RecentTransactions({
   transactions,
@@ -14,7 +15,7 @@ export function RecentTransactions({
     <div className="space-y-6">
       {transactions.map((transaction) => {
         const categoryInfo = categoryMap.get(transaction.category);
-        const Icon = categoryInfo?.icon;
+        const Icon = categoryInfo ? (Icons[categoryInfo.iconName as keyof typeof Icons] as React.ElementType) : null;
 
         return (
           <div key={transaction.id} className="flex items-center">

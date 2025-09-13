@@ -1,7 +1,7 @@
 import { DollarSign, CreditCard, Wallet, Activity } from 'lucide-react';
 
 import { suggestCharts } from '@/ai/flows/suggest-charts';
-import { transactions, budgets, categories as allCategories } from '@/lib/data';
+import { transactions, budgets, serializableCategories } from '@/lib/data';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { MainNav } from '@/components/main-nav';
 import { UserNav } from '@/components/user-nav';
@@ -45,7 +45,7 @@ export default async function DashboardPage() {
           </h1>
           <MainNav className="mx-6 hidden md:flex" />
           <div className="ml-auto flex items-center space-x-4">
-            <AddTransactionSheet categories={allCategories} />
+            <AddTransactionSheet categories={serializableCategories} />
             <UserNav />
           </div>
         </div>

@@ -10,23 +10,45 @@ import {
   Briefcase,
   Gift,
 } from 'lucide-react';
-import type { Transaction, CategoryInfo, Budget } from '@/lib/types';
+import type { Transaction, CategoryInfo, Budget, CategoryInfoSerializable } from '@/lib/types';
+import * as Icons from 'lucide-react';
 
-export const categories: CategoryInfo[] = [
+
+const categoryIcons: { [key: string]: typeof UtensilsCrossed } = {
+  UtensilsCrossed,
+  Car,
+  Ticket,
+  Home,
+  Zap,
+  ShoppingBag,
+  HeartPulse,
+  MoreHorizontal,
+  Briefcase,
+  Gift,
+};
+
+const rawCategories: Omit<CategoryInfo, 'icon'>[] = [
   // Expenses
-  { name: 'Food', icon: UtensilsCrossed, color: 'hsl(var(--chart-1))' },
-  { name: 'Transportation', icon: Car, color: 'hsl(var(--chart-2))' },
-  { name: 'Entertainment', icon: Ticket, color: 'hsl(var(--chart-3))' },
-  { name: 'Housing', icon: Home, color: 'hsl(var(--chart-4))' },
-  { name: 'Utilities', icon: Zap, color: 'hsl(var(--chart-5))' },
-  { name: 'Shopping', icon: ShoppingBag, color: 'hsl(var(--chart-1))' },
-  { name: 'Health', icon: HeartPulse, color: 'hsl(var(--chart-2))' },
-  { name: 'Other', icon: MoreHorizontal, color: 'hsl(var(--chart-3))' },
+  { name: 'Food', iconName: 'UtensilsCrossed', color: 'hsl(var(--chart-1))' },
+  { name: 'Transportation', iconName: 'Car', color: 'hsl(var(--chart-2))' },
+  { name: 'Entertainment', iconName: 'Ticket', color: 'hsl(var(--chart-3))' },
+  { name: 'Housing', iconName: 'Home', color: 'hsl(var(--chart-4))' },
+  { name: 'Utilities', iconName: 'Zap', color: 'hsl(var(--chart-5))' },
+  { name: 'Shopping', iconName: 'ShoppingBag', color: 'hsl(var(--chart-1))' },
+  { name: 'Health', iconName: 'HeartPulse', color: 'hsl(var(--chart-2))' },
+  { name: 'Other', iconName: 'MoreHorizontal', color: 'hsl(var(--chart-3))' },
   // Income
-  { name: 'Salary', icon: Briefcase, color: 'hsl(var(--chart-1))' },
-  { name: 'Freelance', icon: Briefcase, color: 'hsl(var(--chart-2))' },
-  { name: 'Gift', icon: Gift, color: 'hsl(var(--chart-3))' },
+  { name: 'Salary', iconName: 'Briefcase', color: 'hsl(var(--chart-1))' },
+  { name: 'Freelance', iconName: 'Briefcase', color: 'hsl(var(--chart-2))' },
+  { name: 'Gift', iconName: 'Gift', color: 'hsl(var(--chart-3))' },
 ];
+
+export const categories: CategoryInfo[] = rawCategories.map(c => ({
+  ...c,
+  icon: categoryIcons[c.iconName]
+}));
+
+export const serializableCategories: CategoryInfoSerializable[] = rawCategories;
 
 export const transactions: Transaction[] = [
   {

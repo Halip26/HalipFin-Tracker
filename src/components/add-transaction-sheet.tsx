@@ -41,7 +41,7 @@ import {
 import { Calendar } from '@/components/ui/calendar';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
-import type { CategoryInfo } from '@/lib/types';
+import type { CategoryInfoSerializable } from '@/lib/types';
 import { useToast } from '@/hooks/use-toast';
 
 const transactionSchema = z.object({
@@ -53,7 +53,7 @@ const transactionSchema = z.object({
 });
 
 type AddTransactionSheetProps = {
-  categories: CategoryInfo[];
+  categories: CategoryInfoSerializable[];
 };
 
 export function AddTransactionSheet({ categories }: AddTransactionSheetProps) {
