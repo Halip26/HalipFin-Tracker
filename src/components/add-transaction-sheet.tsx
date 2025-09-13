@@ -76,7 +76,7 @@ export function AddTransactionSheet({ categories }: AddTransactionSheetProps) {
     console.log(values);
     toast({
       title: 'Transaction added',
-      description: `${values.type.charAt(0).toUpperCase() + values.type.slice(1)} of $${values.amount} recorded.`,
+      description: `${values.type.charAt(0).toUpperCase() + values.type.slice(1)} of Rp${values.amount.toLocaleString('id-ID')} recorded.`,
     });
     setOpen(false);
     form.reset();
@@ -142,7 +142,7 @@ export function AddTransactionSheet({ categories }: AddTransactionSheetProps) {
                   <FormItem>
                     <FormLabel>Amount</FormLabel>
                     <FormControl>
-                      <Input type="number" placeholder="0.00" {...field} />
+                      <Input type="number" placeholder="0" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

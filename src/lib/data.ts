@@ -54,7 +54,7 @@ export const transactions: Transaction[] = [
   {
     id: '1',
     date: new Date(new Date().setDate(new Date().getDate() - 2)),
-    amount: 2500,
+    amount: 8000000,
     type: 'income',
     category: 'Salary',
     description: 'Monthly Salary',
@@ -62,7 +62,7 @@ export const transactions: Transaction[] = [
   {
     id: '2',
     date: new Date(new Date().setDate(new Date().getDate() - 2)),
-    amount: 55.4,
+    amount: 550000,
     type: 'expense',
     category: 'Food',
     description: 'Groceries',
@@ -70,7 +70,7 @@ export const transactions: Transaction[] = [
   {
     id: '3',
     date: new Date(new Date().setDate(new Date().getDate() - 3)),
-    amount: 30,
+    amount: 300000,
     type: 'expense',
     category: 'Transportation',
     description: 'Gas',
@@ -78,7 +78,7 @@ export const transactions: Transaction[] = [
   {
     id: '4',
     date: new Date(new Date().setDate(new Date().getDate() - 4)),
-    amount: 45,
+    amount: 150000,
     type: 'expense',
     category: 'Entertainment',
     description: 'Movie tickets',
@@ -86,7 +86,7 @@ export const transactions: Transaction[] = [
   {
     id: '5',
     date: new Date(new Date().setDate(new Date().getDate() - 5)),
-    amount: 800,
+    amount: 2500000,
     type: 'expense',
     category: 'Housing',
     description: 'Rent',
@@ -94,7 +94,7 @@ export const transactions: Transaction[] = [
   {
     id: '6',
     date: new Date(new Date().setDate(new Date().getDate() - 6)),
-    amount: 75.2,
+    amount: 450000,
     type: 'expense',
     category: 'Utilities',
     description: 'Electricity Bill',
@@ -102,7 +102,7 @@ export const transactions: Transaction[] = [
   {
     id: '7',
     date: new Date(new Date().setDate(new Date().getDate() - 7)),
-    amount: 120,
+    amount: 750000,
     type: 'expense',
     category: 'Shopping',
     description: 'New clothes',
@@ -110,7 +110,7 @@ export const transactions: Transaction[] = [
   {
     id: '8',
     date: new Date(new Date().setDate(new Date().getDate() - 8)),
-    amount: 50,
+    amount: 200000,
     type: 'expense',
     category: 'Health',
     description: 'Pharmacy',
@@ -118,7 +118,7 @@ export const transactions: Transaction[] = [
   {
     id: '9',
     date: new Date(new Date().setDate(new Date().getDate() - 9)),
-    amount: 25.0,
+    amount: 125000,
     type: 'expense',
     category: 'Food',
     description: 'Lunch out',
@@ -126,7 +126,7 @@ export const transactions: Transaction[] = [
   {
     id: '10',
     date: new Date(new Date().setDate(new Date().getDate() - 12)),
-    amount: 1500,
+    amount: 3000000,
     type: 'income',
     category: 'Freelance',
     description: 'Project X',
@@ -134,7 +134,7 @@ export const transactions: Transaction[] = [
   {
     id: '11',
     date: new Date(new Date().setDate(new Date().getDate() - 17)),
-    amount: 15,
+    amount: 50000,
     type: 'expense',
     category: 'Transportation',
     description: 'Bus fare',
@@ -142,7 +142,7 @@ export const transactions: Transaction[] = [
   {
     id: '12',
     date: new Date(new Date().setDate(new Date().getDate() - 22)),
-    amount: 60,
+    amount: 250000,
     type: 'expense',
     category: 'Food',
     description: 'Dinner with friends',
@@ -150,12 +150,12 @@ export const transactions: Transaction[] = [
 ];
 
 export const budgets: Budget[] = [
-  { category: 'Food', goal: 400 },
-  { category: 'Transportation', goal: 100 },
-  { category: 'Entertainment', goal: 150 },
-  { category: 'Housing', goal: 800 },
-  { category: 'Utilities', goal: 100 },
-  { category: 'Shopping', goal: 200 },
-  { category: 'Health', goal: 100 },
-  { category: 'Other', goal: 50 },
+  { category: 'Food', goal: 2000000 },
+  { category: 'Transportation', goal: 500000 },
+  { category: 'Entertainment', goal: 750000 },
+  { category: 'Housing', goal: 2500000 },
+  { category: 'Utilities', goal: 500000 },
+  { category: 'Shopping', goal: 1000000 },
+  { category: 'Health', goal: 500000 },
+  { category: 'Other', goal: 250000 },
 ];

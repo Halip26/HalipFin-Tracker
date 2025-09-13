@@ -67,7 +67,7 @@ export default async function DashboardPage() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">
-                  ${totalIncome.toLocaleString()}
+                  Rp{totalIncome.toLocaleString('id-ID')}
                 </div>
                 <p className="text-xs text-muted-foreground">
                   in the last 30 days
@@ -83,7 +83,7 @@ export default async function DashboardPage() {
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold text-destructive">
-                  ${totalExpenses.toLocaleString()}
+                  Rp{totalExpenses.toLocaleString('id-ID')}
                 </div>
                 <p className="text-xs text-muted-foreground">
                   in the last 30 days
@@ -96,7 +96,7 @@ export default async function DashboardPage() {
                 <Wallet className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold">${balance.toLocaleString()}</div>
+                <div className="text-2xl font-bold">Rp{balance.toLocaleString('id-ID')}</div>
                 <p className="text-xs text-muted-foreground">
                   Your current balance
                 </p>

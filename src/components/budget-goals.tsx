@@ -26,14 +26,14 @@ export function BudgetGoals({
                   progress > 80 && 'text-destructive'
                 )}
               >
-                ${spent.toFixed(0)} / ${budget.goal}
+                Rp{spent.toLocaleString('id-ID')} / Rp{budget.goal.toLocaleString('id-ID')}
               </span>
             </div>
             <Progress value={progress} className="h-2" />
             <p className="text-xs text-muted-foreground text-right">
               {remaining >= 0
-                ? `$${remaining.toFixed(0)} remaining`
-                : `$${Math.abs(remaining).toFixed(0)} over budget`}
+                ? `Rp${remaining.toLocaleString('id-ID')} remaining`
+                : `Rp${Math.abs(remaining).toLocaleString('id-ID')} over budget`}
             </p>
           </div>
         );

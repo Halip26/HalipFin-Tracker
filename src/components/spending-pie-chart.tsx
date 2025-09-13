@@ -51,7 +51,7 @@ export function SpendingPieChart({
       <PieChart>
         <ChartTooltip
           cursor={false}
-          content={<ChartTooltipContent hideLabel nameKey="name" />}
+          content={<ChartTooltipContent hideLabel nameKey="name" formatter={(value) => `Rp${Number(value).toLocaleString('id-ID')}`} />}
         />
         <Pie
           data={chartData}
@@ -70,10 +70,7 @@ export function SpendingPieChart({
         <div className="text-center">
             <p className="text-sm text-muted-foreground">Total Spent</p>
             <p className="text-2xl font-bold font-headline">
-            ${totalValue.toLocaleString(undefined, {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-            })}
+            Rp{totalValue.toLocaleString('id-ID')}
             </p>
         </div>
       </div>

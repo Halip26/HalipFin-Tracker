@@ -43,8 +43,8 @@ export function RecentTransactions({
                 transaction.type === 'income' ? 'text-accent' : ''
               )}
             >
-              {transaction.type === 'income' ? '+' : '-'}$
-              {transaction.amount.toFixed(2)}
+              {transaction.type === 'income' ? '+' : '-'}Rp
+              {transaction.amount.toLocaleString('id-ID')}
             </div>
           </div>
         );

@@ -59,11 +59,11 @@ export function SpendingBarChart({
           fontSize={12}
           tickLine={false}
           axisLine={false}
-          tickFormatter={(value) => `$${value}`}
+          tickFormatter={(value) => `Rp${Number(value) / 1000}k`}
         />
         <ChartTooltip
           cursor={false}
-          content={<ChartTooltipContent hideLabel />}
+          content={<ChartTooltipContent hideLabel formatter={(value) => `Rp${Number(value).toLocaleString('id-ID')}`} />}
         />
         <Bar dataKey="spent" radius={8} />
       </BarChart>
