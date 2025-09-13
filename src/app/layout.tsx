@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster"
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Halip Finance Tracker',
+  title: 'HalipFin Tracker',
   description: 'A budgeting and expense tracking app with spending categories, charts and budget goals.',
 };
 

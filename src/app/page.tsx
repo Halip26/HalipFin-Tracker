@@ -41,7 +41,7 @@ export default async function DashboardPage() {
       <header className="border-b">
         <div className="flex h-16 items-center px-4 md:px-8">
           <h1 className="text-2xl font-bold tracking-tight font-headline text-primary">
-            Halip Finance Tracker
+            HalipFin Tracker
           </h1>
           <MainNav className="mx-6 hidden md:flex" />
           <div className="ml-auto flex items-center space-x-4">
