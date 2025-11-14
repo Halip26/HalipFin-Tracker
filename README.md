@@ -32,18 +32,20 @@ To get a local copy up and running, follow these simple steps.
 
 ### Installation
 
-1.  **Clone the repository:**
+1. **Clone the repository:**
+
     ```sh
     git clone <YOUR_REPOSITORY_URL>
     cd <YOUR_PROJECT_DIRECTORY>
     ```
 
-2.  **Install NPM packages:**
+2. **Install NPM packages:**
+
     ```sh
     npm install
     ```
 
-3.  **Set up environment variables:**
+3. **Set up environment variables:**
 
     Create a `.env` file in the root of your project and add your Google Gemini API key. You can get one from [Google AI Studio](https://makersuite.google.com/).
 
@@ -53,13 +55,15 @@ To get a local copy up and running, follow these simple steps.
 
 ### Running the Application
 
-1.  **Run the Genkit developer server (in a separate terminal):**
+1. **Run the Genkit developer server (in a separate terminal):**
     This command starts the Genkit flows required for the AI features.
+
     ```sh
     npm run genkit:dev
     ```
 
-2.  **Run the Next.js development server:**
+2. **Run the Next.js development server:**
+
     ```sh
     npm run dev
     ```
